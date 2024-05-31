@@ -6,6 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+a13c-embedded = { git = "https://github.com/Angelo13C/a13c-embedded.git", features = ["embedded-svc"] }
 embedded-hal = "1.0.0"
 embedded-svc = "0.27"
 log = { version = "0.4.17", default-features = false }
