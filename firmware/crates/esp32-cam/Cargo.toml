@@ -16,6 +16,8 @@ esp-idf-svc = { git = "https://github.com/Angelo13C/esp-idf-svc.git", branch = "
 
 enumset = "1.1"
 
+embedded-svc = "0.27"
+
 [[package.metadata.esp-idf-sys.extra_components]]
 component_dirs = "esp32-camera"
 bindings_header = "bindings.h"
