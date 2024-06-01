@@ -22,6 +22,14 @@ firmware-core = { path = "../core" }
 
 a13c-embedded = { path = "https://github.com/Angelo13C/a13c-embedded.git", features = ["embedded-svc", "std", "hardware-esp32"] }
 
+[profile.release]
+opt-level = "s"
+
+[profile.dev]
+debug = true    # Symbols are nice and they don't increase the size on Flash
+opt-level = "z"
+
+
 [[package.metadata.esp-idf-sys.extra_components]]
 component_dirs = "esp32-camera"
 bindings_header = "bindings.h"
