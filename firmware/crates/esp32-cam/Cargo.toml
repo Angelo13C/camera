@@ -12,6 +12,8 @@ description = "ESP32-CAM specific code for the camera's firmware"
 [dependencies]
 esp-idf-hal = "0.43"
 esp-idf-sys = "0.34"
+esp-idf-svc = { git = "https://github.com/Angelo13C/esp-idf-svc.git", branch = "expose_ctrl_port" }
+
 [[package.metadata.esp-idf-sys.extra_components]]
 component_dirs = "esp32-camera"
 bindings_header = "bindings.h"
