@@ -11,6 +11,7 @@ description = "ESP32-CAM specific code for the camera's firmware"
 
 [dependencies]
 esp-idf-hal = "0.43"
+esp-idf-sys = "0.34"
 [[package.metadata.esp-idf-sys.extra_components]]
 component_dirs = "esp32-camera"
 bindings_header = "bindings.h"
