@@ -9,6 +9,8 @@ description = "ESP32-CAM specific code for the camera's firmware"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[dependencies]
+esp-idf-hal = "0.43"
 [[package.metadata.esp-idf-sys.extra_components]]
 component_dirs = "esp32-camera"
 bindings_header = "bindings.h"
