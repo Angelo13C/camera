@@ -1,0 +1,22 @@
+[build]
+target = "xtensa-esp32-espidf"
+
+[target.xtensa-esp32-espidf]
+linker = "ldproxy"
+runner = "espflash flash --monitor --partition-table partitions.csv"
+# Uncomment for ESP-IDF 5 and later. Don't forget to also uncomment the `ESP_IDF_VERSION = "release/v5.0"`parameter in the `[env]` section below
+#rustflags = ["--cfg", "espidf_time64"]
+
+[unstable]
+build-std = ["std", "panic_abort"]
+
+[env]
+ESP_IDF_VERSION = "v4.4.5"
+ESP_IDF_PATH_ISSUES = "warn"
+
+ESP_IDF_SYS_ROOT_CRATE = "esp32-cam"
+
+# This is necessary because its deafult value would only be "sdkconfig.defaults", and since its relative to the workspace directory,
+# and not this specific crate, I need to put the relative path from the root directory. Check this:
+# https://esp-rs.github.io/esp-idf-sys/esp_idf_sys/#esp_idf_sdkconfig_defaults-esp_idf_sdkconfig_defaults
+ESP_IDF_SDKCONFIG_DEFAULTS = "crates/esp32-cam/sdkconfig.defaults"
